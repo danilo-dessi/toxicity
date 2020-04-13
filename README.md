@@ -3,7 +3,8 @@
 This repository contains the scripts developed to perform the analysis reported in the paper: 
 
 ```
-An Assessment of Deep Learning Models and Word Embeddings for Toxicity Detection within Online Textual Comments authored by Danilo Dessi' and Diego Reforgiato Recupero.
+An Assessment of Deep Learning Models and Word Embeddings for Toxicity Detection 
+within Online Textual Comments authored by Danilo Dessi' and Diego Reforgiato Recupero.
 ``` 
 
 If you have any question plese contact: [Danilo Dessi'](mailto:danilo_dessi@unica.it)
