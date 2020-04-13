@@ -55,7 +55,7 @@ def get_model_name(args):
 parser = argparse.ArgumentParser(description='Embeddings')
 #parser.add_argument('--input-file', dest='input_file', default='../datasets/toxic_balanced.csv', type=str, action='store', help='The input file')
 parser.add_argument('--target-class', dest='target_class', default='toxic', type=str, action='store', help='The target class')
-parser.add_argument('--emb-file', dest='emb_file', default='../../resources/word2vec_toxic_300.bin', type=str, action='store', help='Embeddings .bin file (specify also emb size)')
+parser.add_argument('--emb-file', dest='emb_file', default='../resources/word2vec_toxic_300.bin', type=str, action='store', help='Embeddings .bin file (specify also emb size)')
 parser.add_argument('--size', dest='emb_size', default=300, type=int, action='store', help='Embeddings size')
 parser.add_argument('--model', dest='model', default=1, type=int, action='store', help='Select the model')
 parser.add_argument('--trainable', dest='trainable', default=False, type=str2bool, action='store', help='Make embeddings trainable')
@@ -188,17 +188,6 @@ for train_index, test_index in cv.split(data):
 		model.add(LSTM(64, return_sequences=False, recurrent_dropout=0.2, implementation=1))
 		model.add(Dropout(0.1))
 		model.add(Dense(1, activation='sigmoid'))
-
-	'''elif model_type == 4:
-		model = Sequential()
-		model.add(Embedding(num_words, embedding_dim, input_length=max_len))
-		model.add(LSTM(128, return_sequences=True, recurrent_dropout=0.2, implementation=1))
-		model.add(Dropout(0.1))
-		model.add(LSTM(64, return_sequences=True, recurrent_dropout=0.2, implementation=1))
-		model.add(Dropout(0.1))
-		#model.add(Attention())
-		model.add(SeqWeightedAttention())
-		model.add(Dense(1, activation='sigmoid'))'''
 
 	elif model_type == 4:
 		model = Sequential()

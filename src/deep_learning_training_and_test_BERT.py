@@ -185,16 +185,8 @@ for train_index, test_index in cv.split(data):
 		model.add(Dropout(0.1))
 		model.add(Dense(1, activation='sigmoid'))
 
-	elif model_type == 4:
-		model = Sequential()
-		model.add(Embedding(num_words, embedding_dim, input_length=max_len))
-		model.add(LSTM(128, return_sequences=True, recurrent_dropout=0.2, implementation=1))
-		model.add(Dropout(0.1))
-		model.add(LSTM(64, return_sequences=True, recurrent_dropout=0.2, implementation=1))
-		model.add(SeqWeightedAttention())
-		model.add(Dense(1, activation='sigmoid'))
 
-	elif model_type == 5:
+	elif model_type == 4:
 		model = Sequential()
 		model.add(Embedding(num_words, embedding_dim, input_length=max_len))
 		model.add(Bidirectional(LSTM(128, return_sequences=True, recurrent_dropout=0.2, implementation=1)))
@@ -203,16 +195,6 @@ for train_index, test_index in cv.split(data):
 		model.add(Dropout(0.1))
 		model.add(Dense(1, activation='sigmoid'))
 
-	elif model_type == 6:
-		model = Sequential()
-		model.add(Embedding(num_words, embedding_dim, input_length=max_len))
-		model.add(Bidirectional(LSTM(128, return_sequences=True, recurrent_dropout=0.2, implementation=1)))
-		model.add(Dropout(0.1))
-		model.add(Bidirectional(LSTM(128, return_sequences=False, recurrent_dropout=0.2, implementation=1)))
-		model.add(Dropout(0.1))
-		model.add(Dense(64))
-		model.add(Dropout(0.1))
-		model.add(Dense(1, activation='sigmoid'))
 	else:
 		print('No module has been chosen')
 		exit(1)

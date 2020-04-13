@@ -26,8 +26,8 @@ if __name__ == "__main__":
 
 	print ('# Word2Vec embeddings generation')
 	model = gensim.models.Word2Vec(texts, size=args.emb_size, window=args.window, min_count=args.min_count, workers=args.workers, iter=args.iter)
-	model.wv.save_word2vec_format('../../resources/word2vec_toxic_'+ str(args.emb_size) + '.txt', binary=False)
-	model.wv.save_word2vec_format('../../resources/word2vec_toxic_'+ str(args.emb_size) + '.bin', binary=True)
+	model.wv.save_word2vec_format('../resources/word2vec_toxic_'+ str(args.emb_size) + '.txt', binary=False)
+	model.wv.save_word2vec_format('../resources/word2vec_toxic_'+ str(args.emb_size) + '.bin', binary=True)
 	print ('File ' + 'word2vec_toxic_'+ str(args.emb_size) + '.bin generated')
 
 

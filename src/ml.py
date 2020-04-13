@@ -80,10 +80,6 @@ tfidf_matrix = vectorizer.fit_transform(comments)
 # summarize encoded vector
 print(tfidf_matrix.shape)
 print(tfidf_matrix[0])
-#print(tfidf_matrix[0].toarray())
-#clf = SVC(gamma='auto')
-#clf.fit(tfidf_matrix[:-1], comments_labels[:-1])
-#predicted = clf.predict(tfidf_matrix[-1])
 
 
 
