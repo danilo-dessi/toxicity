@@ -26,4 +26,9 @@ If you have any question plese contact: [Danilo Dessi'](mailto:danilo_dessi@unic
 	- *test_labels.csv* the original labels of the dataset (see [Kaggle data](https://www.kaggle.com/c/jigsaw-toxic-comment-classification-challenge/data)).
 	- *test_with_labels.csv* the file that merge the test data wih the corresponding labels.
 	- *X_balanced* the balanced dataset for the class X.
-- **resources/** contains the word embeddings.
+- **resources/** should contain the following word embedding models:
+	- *word2vec_toxic_300.bin* the word embeddings trained on the domain.
+	- *mimicked_Google_400k.bin* the mimicked word embeddings containing all words of our domain, plus other coming from the pre-trained model for a maximum of 400k embeddings.
+	- *GoogleNews-vectors-negative300.bin* the Google pre-trained embeddings available [here](https://drive.google.com/file/d/0B7XkCwpI5KDYNlNUTTlSS21pQmM/edit?usp=sharing).
+
+Due to upload limits of the files size on github, contact us to get *word2vec_toxic_300.bin* and *mimicked_Google_400k.bin* models.
