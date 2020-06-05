@@ -42,11 +42,11 @@ def get_model_name(args):
 	name = args.target_class
 	name += '_' + str(args.model)
 
-	if args.emb_file == '../../resources/word2vec_toxic_300.bin':
+	if args.emb_file == '../resources/word2vec_toxic_300.bin':
 		name += '_domain'
-	elif args.emb_file == '../../resources/GoogleNews-vectors-negative300.bin':
+	elif args.emb_file == '../resources/GoogleNews-vectors-negative300.bin':
 		name += '_generic'
-	elif args.emb_file == '../../resources/mimicked_Google_400k.bin':
+	elif args.emb_file == '../resources/mimicked_Google_400k.bin':
 		name += '_mimicked'
 	name += '.h5'
 	return name
@@ -104,12 +104,12 @@ tokenizer.fit_on_texts(comments)
 sequences = tokenizer.texts_to_sequences(comments)
 
 embedding_name = ''
-if args.emb_file == '../../resources/word2vec_toxic_300.bin':
-		embedding_name = '_domain'
-	elif args.emb_file == '../../resources/GoogleNews-vectors-negative300.bin':
-		embedding_name = '_generic'
-	elif args.emb_file == '../../resources/mimicked_Google_400k.bin':
-		embedding_name = '_mimicked'
+if args.emb_file == '../resources/word2vec_toxic_300.bin':
+	embedding_name = '_domain'
+elif args.emb_file == '../resources/GoogleNews-vectors-negative300.bin':
+	embedding_name = '_generic'
+elif args.emb_file == '../resources/mimicked_Google_400k.bin':
+	embedding_name = '_mimicked'
 with open('./models/' + target_class + '_' + str(model_type)  + '_' + embedding_name +  '_tokenizer.pickle', 'wb') as handle:
     pickle.dump(tokenizer, handle, protocol=pickle.HIGHEST_PROTOCOL)
 
