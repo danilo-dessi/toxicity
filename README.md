@@ -4,10 +4,10 @@ This repository contains the scripts developed to perform the analysis reported 
 
 ```
 An Assessment of Deep Learning Models and Word Embeddings for Toxicity Detection 
-within Online Textual Comments authored by Danilo Dessi' and Diego Reforgiato Recupero.
+within Online Textual Comments authored by Danilo Dessi', Diego Reforgiato Recupero, and Harald Sack.
 ``` 
 
-If you have any question plese contact: [Danilo Dessi'](mailto:danilo_dessi@unica.it)
+If you have any question plese contact: [Danilo Dessi'](mailto:danilo.dessi@kit.edu)
 
 
 ## Repository Description
@@ -31,4 +31,7 @@ If you have any question plese contact: [Danilo Dessi'](mailto:danilo_dessi@unic
 	- *mimicked_Google_400k.bin* the mimicked word embeddings containing all words of our domain, plus other coming from the pre-trained model for a maximum of 400k embeddings.
 	- *GoogleNews-vectors-negative300.bin* the Google pre-trained embeddings available [here](https://drive.google.com/file/d/0B7XkCwpI5KDYNlNUTTlSS21pQmM/edit?usp=sharing).
 
-Due to upload limits of the files size on github, contact us to get *word2vec_toxic_300.bin* and *mimicked_Google_400k.bin* models.
+Due to upload limits of the files size on github, contact [Danilo Dessi'](mailto:danilo.dessi@kit.edu) to get *word2vec_toxic_300.bin* and *mimicked_Google_400k.bin* models.
+
+If you have any further question, feel free to contact us!
+
